@@ -23,7 +23,7 @@ easyrsa init-pki
 # needed for normal OpenVPN operation.
 easyrsa --keysize=4096 build-ca nopass
 
-easyrsa gen-dh
+easyrsa gen-dh --keysize=4096
 openvpn --genkey --secret $EASYRSA_PKI/ta.key
 
 # Was nice to autoset, but probably a bad idea in practice, users should
