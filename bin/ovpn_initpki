@@ -37,4 +37,4 @@ openvpn --genkey --secret $EASYRSA_PKI/ta.key
 #fi
 
 # For a server key with a password, manually init; this is autopilot
-easyrsa build-server-full "$OVPN_CN" nopass
+easyrsa --keysize=4096 build-server-full "$OVPN_CN" nopass
