@@ -35,6 +35,7 @@ get_client_config() {
 client
 nobind
 dev $OVPN_DEVICE
+dhcp-option DNS 223.5.5.5
 remote-cert-tls server
 
 remote $OVPN_CN $OVPN_PORT $OVPN_PROTO"
